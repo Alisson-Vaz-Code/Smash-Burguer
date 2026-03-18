@@ -1,0 +1,588 @@
+<!doctype html>
+<html lang="en">
+  <head>
+  <style>
+    @keyframes btnBounce {
+      0% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.25);
+      }
+      100% {
+        transform: scale(1);
+      }
+    }
+
+    .btn-bounce {
+      animation: btnBounce 0.3s ease;
+    }
+  </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./styles/output.css" />
+
+    <title>SMBURGUER</title>
+  </head>
+
+  <body>
+    <!-- HEADER -->
+    <header class="w-full h-[420px] bg-home bg-cover bg-center">
+      <div class="w-full h-full flex flex-col justify-center items-center">
+        <img
+          src="./assets/logo.jpg"
+          alt="Logo Smash burguer"
+          class="w-32 h-32 rounded-full shadow-lg hover:scale-110 duration-200"
+        />
+
+        <h1 class="text-4xl mt-4 mb-2 font-bold text-white">SMASH BURGUER</h1>
+
+        <span class="text-white font-medium"
+          >Travessa bela vista 807, Castelo Branco, CAXIAS-MA
+        </span>
+        <div class="bg-green-600 px-4 py-1 rounded-full" id="date-span">
+          <span class="text-white font-medium gap-2"
+            >Sab á Qui - 18:30 às 23:30</span
+          >
+        </div>
+      </div>
+    </header>
+    <!-- FIM DO HEADER -->
+
+    <!--MENU-->
+    <h2 class="text-3xl md:text-4xl font-bold text-center mt-9 mb-6">
+      Veja nosso cardápio
+    </h2>
+
+    <div>
+      <main
+        class="grid grid-cols-1 md:grid-cols-2 gap-7 md:gap-10 mx-auto max-w-7xl px-2 mb-16"
+      >
+        <!--ITEM-->
+        <div class="flex gap-2">
+          <img
+            src="./assets/smash.jpeg"
+            alt="Smash burguer"
+            class="w-28 h-28 rounded-md hover:scale-110 duration-200"
+          />
+          <div>
+            <p class="font-bold">Smash burguer</p>
+            <p class="text-sm text-color">
+              Hamburguer que vai pão gergelim, salada, ovo, bastante molho,
+              carne de hamburguer deliciosa com queijo mussarela derretido.
+            </p>
+            <div class="flex items-center gap-2 justify-between mt-3">
+              <p class="font-bold text-lg">R$ 13,00</p>
+              <button
+                class="bg-gray-900 px-5 rounded add-to-cart-btn"
+                data-name="Smash burguer"
+                data-price="13.00"
+              >
+                <i class="fa fa-cart-plus text-lg text-white"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+        <!--FIM ITEM-->
+
+        <!--ITEM 2-->
+        <div class="flex gap-2">
+          <img
+            src="./assets/duplo.jpeg"
+            alt="Smash Duplo"
+            class="w-28 h-28 rounded-md hover:scale-110 duration-200"
+          />
+          <div>
+            <p class="font-bold">Smash Duplo</p>
+            <p class="text-sm">
+              Hamburguer que vai pão gergelim, salada, ovo, bastante molho, DUAS
+              carnes de hamburguer deliciosas com queijo mussarela derretido.
+            </p>
+            <div class="flex items-center gap-2 justify-between mt-3">
+              <p class="font-bold text-lg">R$ 16,00</p>
+              <button
+                class="bg-gray-900 px-5 rounded add-to-cart-btn"
+                data-name="Smash Duplo"
+                data-price="16.00"
+              >
+                <i class="fa fa-cart-plus text-lg text-white"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+        <!--FIM ITEM 2-->
+
+        <!--ITEM-->
+        <div class="flex gap-2">
+          <img
+            src="./assets/nobre.jpeg"
+            alt="Nobre burguer"
+            class="w-28 h-28 rounded-md hover:scale-110 duration-200"
+          />
+          <div>
+            <p class="font-bold">Nobre Burguer</p>
+            <p class="text-sm">
+              Hamburguer que vai pão gergelim, salada, ovo, bastante molho,
+              carne artesanal de 130g deliciosa com queijo mussarela derretido.
+            </p>
+            <div class="flex items-center gap-2 justify-between mt-3">
+              <p class="font-bold text-lg">R$ 18,00</p>
+              <button
+                class="bg-gray-900 px-5 rounded add-to-cart-btn"
+                data-name="Nobre burguer"
+                data-price="18.00"
+              >
+                <i class="fa fa-cart-plus text-lg text-white"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+        <!--FIM ITEM 3-->
+
+        <!--ITEM 4-->
+        <div class="flex gap-2">
+          <img
+            src="./assets/steak.jpeg"
+            alt="Steak burguer"
+            class="w-28 h-28 rounded-md hover:scale-110 duration-200"
+          />
+          <div>
+            <p class="font-bold">Steak burguer</p>
+            <p class="text-sm">
+              Hamburguer que vai pão gergelim, steak de frango, bastante molho,
+              carne artesanal deliciosa com queijo CHEDDAR derretido.
+            </p>
+            <div class="flex items-center gap-2 justify-between mt-3">
+              <p class="font-bold text-lg">R$ 20,00</p>
+              <button
+                class="bg-gray-900 px-5 rounded add-to-cart-btn"
+                data-name="Steak burguer"
+                data-price="20.00"
+              >
+                <i class="fa fa-cart-plus text-lg text-white"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+        <!--FIM ITEM-->
+
+        <!--ITEM-->
+        <div class="flex gap-2">
+          <img
+            src="./assets/calabresa.jpeg"
+            alt="Calabresa burguer"
+            class="w-28 h-28 rounded-md hover:scale-110 duration-200"
+          />
+          <div>
+            <p class="font-bold">Calabresa burguer</p>
+            <p class="text-sm">
+              Hamburguer que vai pão gergelim, salada, ketchup, carne artesanal
+              deliciosa com queijo CHEDDAR derretido.
+            </p>
+            <div class="flex items-center gap-2 justify-between mt-3">
+              <p class="font-bold text-lg">R$ 23,00</p>
+              <button
+                class="bg-gray-900 px-5 rounded add-to-cart-btn"
+                data-name="Calabresa burguer"
+                data-price="23.00"
+              >
+                <i class="fa fa-cart-plus text-lg text-white"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+        <!--FIM ITEM 5-->
+
+        <!--ITEM-->
+        <div class="flex gap-2">
+          <img
+            src="./assets/x-bacon.jpeg"
+            alt="X-bacon burguer"
+            class="w-28 h-28 rounded-md hover:scale-110 duration-200"
+          />
+          <div>
+            <p class="font-bold">X-bacon burguer</p>
+            <p class="text-sm">
+              Hamburguer que vai pão gergelim, salada, bastante molho, carne
+              artesanal de 150g deliciosa com queijo CHEDDAR derretido.
+            </p>
+            <div class="flex items-center gap-2 justify-between mt-3">
+              <p class="font-bold text-lg">R$ 28,00</p>
+              <button
+                class="bg-gray-900 px-5 rounded add-to-cart-btn"
+                data-name="X-bacon burguer"
+                data-price="28.00"
+              >
+                <i class="fa fa-cart-plus text-lg text-white"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+        <!--FIM ITEM 6-->
+      </main>
+
+      <div class="mx-auto max-w-7xl px-2 my-2">
+        <h2 class="text-3xl md:text-4xl font-bold">Bebidas</h2>
+      </div>
+    </div>
+
+    <!--GRID BEBIDAS-->
+    <div
+      class="grid grid-cols-1 md:grid-cols-2 gap-7 md:gap-10 mx-auto max-w-7xl px-2 mb-16 mt-9"
+      id="MENU"
+    >
+      <!--ITEM BEBIDA 1-->
+      <div class="flex gap-2">
+        <img
+          src="./assets/COCA COLA LATA.png"
+          alt="Coca lata"
+          class="w-28 h-28 rounded-md hover:scale-110 duration-200"
+        />
+        <div class="w-full">
+          <p class="font-bold">Coca lata</p>
+          <div class="flex items-center gap-2 justify-between mt-3">
+            <p class="font-bold text-lg">R$ 6,00</p>
+            <button
+              class="bg-gray-900 px-5 rounded add-to-cart-btn"
+              data-name="Coca lata"
+              data-price="6.00"
+            >
+              <i class="fa fa-cart-plus text-lg text-white"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+      <!--FIM bebida 1-->
+
+      <!--ITEM BEBIDA 2-->
+      <div class="flex gap-2">
+        <img
+          src="./assets/GUARANA LATA.png"
+          alt="Guaraná lata"
+          class="w-28 h-28 rounded-md hover:scale-110 duration-200"
+        />
+        <div class="w-full">
+          <p class="font-bold">Guaraná lata</p>
+          <div class="flex items-center gap-2 justify-between mt-3">
+            <p class="font-bold text-lg">R$ 6,00</p>
+            <button
+              class="bg-gray-900 px-5 rounded add-to-cart-btn"
+              data-name="Guaraná lata"
+              data-price="6.00"
+            >
+              <i class="fa fa-cart-plus text-lg text-white"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+      <!--FIM BEBIDA 2-->
+
+      <!--ITEM BEBIDA 3-->
+      <div class="flex gap-2">
+        <img
+          src="./assets/FANTA LARANJA LATA.png"
+          alt="Fanta lata"
+          class="w-28 h-28 rounded-md hover:scale-110 duration-200"
+        />
+        <div class="w-full">
+          <p class="font-bold">Fanta lata</p>
+          <div class="flex items-center gap-2 justify-between mt-3">
+            <p class="font-bold text-lg">R$ 6,00</p>
+            <button
+              class="bg-gray-900 px-5 rounded add-to-cart-btn"
+              data-name="Fanta lata"
+              data-price="6.00"
+            >
+              <i class="fa fa-cart-plus text-lg text-white"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+      <!--FIM BEBIDA 3-->
+
+      <!--ITEM BEBIDA 4-->
+      <div class="flex gap-2">
+        <img
+          src="./assets/FANTA UVA LATA.png"
+          alt="Fanta uva lata"
+          class="w-28 h-28 rounded-md hover:scale-110 duration-200"
+        />
+        <div class="w-full">
+          <p class="font-bold">Fanta uva lata</p>
+          <div class="flex items-center gap-2 justify-between mt-3">
+            <p class="font-bold text-lg">R$ 6,00</p>
+            <button
+              class="bg-gray-900 px-5 rounded add-to-cart-btn"
+              data-name="Fanta uva lata"
+              data-price="6.00"
+            >
+              <i class="fa fa-cart-plus text-lg text-white"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+      <!--FIM BEBIDA 4-->
+
+      <!--ITEM BEBIDA 5-->
+      <div class="flex gap-2">
+        <img
+          src="./assets/JESUS LATA.png"
+          alt="jesus lata"
+          class="w-28 h-28 rounded-md hover:scale-110 duration-200"
+        />
+        <div class="w-full">
+          <p class="font-bold">Jesus lata</p>
+          <div class="flex items-center gap-2 justify-between mt-3">
+            <p class="font-bold text-lg">R$ 6,00</p>
+            <button
+              class="bg-gray-900 px-5 rounded add-to-cart-btn"
+              data-name="Jesus lata"
+              data-price="6.00"
+            >
+              <i class="fa fa-cart-plus text-lg text-white"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+      <!--FIM BEBIDA 5-->
+
+      <!--ITEM BEBIDA 6-->
+      <div class="flex gap-2">
+        <img
+          src="./assets/COCA COLA ZERO LATA.png"
+          alt="Coca zero lata"
+          class="w-28 h-28 rounded-md hover:scale-110 duration-200"
+        />
+        <div class="w-full">
+          <p class="font-bold">Coca zero lata</p>
+          <div class="flex items-center gap-2 justify-between mt-3">
+            <p class="font-bold text-lg">R$ 6,00</p>
+            <button
+              class="bg-gray-900 px-5 rounded add-to-cart-btn"
+              data-name="Coca zero lata"
+              data-price="6.00"
+            >
+              <i class="fa fa-cart-plus text-lg text-white"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+      <!--FIM BEBIDA 6-->
+
+
+    </div>
+    <!-- FIM GRID BEBIDAS-->
+
+      <div class="mx-auto max-w-7xl px-2 my-2">
+        <h2 class="text-3xl md:text-4xl font-bold">Combos</h2>
+      </div>
+    
+    <!-- GRID COMBOS -->
+
+    <div>
+      <main
+        class="grid grid-cols-1 md:grid-cols-2 gap-7 md:gap-10 mx-auto max-w-7xl px-2 mb-16 mt-9"
+      >
+
+        <!--COMBO DA CASA-->
+        <div class="flex gap-2">
+          <img
+            src="./assets/combo_da_casa.jpeg"
+            alt="Combo da casa"
+            class="w-28 h-28 rounded-md hover:scale-110 duration-200"
+          />
+          <div>
+            <p class="font-bold">Combo da casa</p>
+            <p class="text-sm text-color">
+              Hamburguer nobre artesanal, porção de batata frita 200g, coca-lata e TAXA GRATÍS!.
+            </p>
+            <div class="flex items-center gap-2 justify-between mt-3">
+              <p class="font-bold text-lg">R$ 29,99</p>
+              <button
+                class="bg-gray-900 px-5 rounded add-to-cart-btn"
+                data-name="Combo da casa"
+                data-price="29.99"
+              >
+                <i class="fa fa-cart-plus text-lg text-white"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+        <!--FIM COMBO DA CASA-->
+
+        <!--SUPER COMBO-->
+        <div class="flex gap-2">
+          <img
+            src="./assets/super_combo.jpeg"
+            alt="Super Combo"
+            class="w-28 h-28 rounded-md hover:scale-110 duration-200"
+          />
+          <div>
+            <p class="font-bold">Super Combo</p>
+            <p class="text-sm text-color">
+              Hamburguer artesanal X-bacon, porção de batata frita 200g, coca-lata e TAXA GRATÍS!.
+            </p>
+            <div class="flex items-center gap-2 justify-between mt-3">
+              <p class="font-bold text-lg">R$ 39,99</p>
+              <button
+                class="bg-gray-900 px-5 rounded add-to-cart-btn"
+                data-name="Super Combo"
+                data-price="39.99"
+              >
+                <i class="fa fa-cart-plus text-lg text-white"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+        <!--FIM SUPER COMBO-->
+
+        <!--COMBO DA CASA-->
+        <div class="flex gap-2">
+          <img
+            src="./assets/smash_casal.jpeg"
+            alt="Smash Combo"
+            class="w-28 h-28 rounded-md hover:scale-110 duration-200"
+          />
+          <div>
+            <p class="font-bold">Smash Combo</p>
+            <p class="text-sm text-color">
+              DOIS smash burguer, porção de batata frita 350g, guaraná de 1L e TAXA GRATÍS!.
+            </p>
+            <div class="flex items-center gap-2 justify-between mt-3">
+              <p class="font-bold text-lg">R$ 40,00</p>
+              <button
+                class="bg-gray-900 px-5 rounded add-to-cart-btn"
+                data-name="Smash combo"
+                data-price="40.00"
+              >
+                <i class="fa fa-cart-plus text-lg text-white"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+        <!--FIM SMASH COMBO-->
+
+        <!--COMBO CASAl-->
+        <div class="flex gap-2">
+          <img
+            src="./assets/combo_casal.jpeg"
+            alt="Combo casal"
+            class="w-28 h-28 rounded-md hover:scale-110 duration-200"
+          />
+          <div>
+            <p class="font-bold">Combo Casal</p>
+            <p class="text-sm text-color">
+              DOIS calabresa burguer, porção de batata frita 400g, coca-cola de 1L e TAXA GRATÍS!.
+            </p>
+            <div class="flex items-center gap-2 justify-between mt-3">
+              <p class="font-bold text-lg">R$ 55,99</p>
+              <button
+                class="bg-gray-900 px-5 rounded add-to-cart-btn"
+                data-name="Combo Casal"
+                data-price="55.99"
+              >
+                <i class="fa fa-cart-plus text-lg text-white"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+        <!--FIM COMBO CASAL-->
+      </div>
+    </div>
+    <!-- FIM GRID COMBOS -->
+
+    <!-- MODAL CART -->
+    <div
+      id="cart-modal"
+      class="bg-black/60 w-full h-full fixed top-0 left-0 z-[99] items-center justify-center hidden"
+    >
+      <div class="bg-white p-5 rounded-md min-w-[90%] md:min-w-[600px] max-h-[80vh] overflow-y-auto">
+        <h2 class="text-center font-bold text-2xl mb-2">Meu carrinho</h2>
+
+        <div id="cart-items" class="flex flex-col gap-2 mb-2"></div>
+
+        <p class="font-bold">Total: <span id="cart-total">0.00</span></p>
+
+        <p class="font-bold mt-4">Endereço de entrega:</p>
+        
+
+        <input
+          type="text"
+          placeholder="Digite seu endereço completo..."
+          id="address"
+          class="w-full border-2 p-1 rounded my-1"
+        />
+        <p class="font-bold mt-4">Forma de pagamento:</p>
+
+        <select
+          id="payment"
+          class="w-full border-2 p-2 rounded my-1"
+        >
+          <option value="">Selecione...</option>
+          <option value="Dinheiro">Dinheiro</option>
+          <option value="Pix">Pix</option>
+          <option value="Cartão de Crédito">Cartão de Crédito</option>
+          <option value="Cartão de Débito">Cartão de Débito</option>
+        </select>
+
+        <p class="text-red-500 hidden" id="payment-warn">
+          Escolha a forma de pagamento!
+        </p>
+
+        <p class="text-red-500 hidden" id="address-warn">
+          Digite seu endereço completo!
+        </p>
+
+        <div class="flex items-center justify-between mt-5 w-full">
+          <button id="close-modal-btn">Fechar</button>
+
+          <button
+            id="checkout-btn"
+            class="bg-green-500 text-white px-4 py-1 rounded"
+          >
+            Finalizar pedido
+          </button>
+        </div>
+      </div>
+    </div>
+    <!--FIM MODAL CART-->
+
+    <!-- footer button -->
+    <footer
+      class="w-full bg-black py-3 fixed bottom-0 z-40 flex items-center justify-center"
+    >
+      <button
+        class="font-bold text-white flex items-center gap-2"
+        id="cart-btn"
+      >
+        (<span id="cart-count">0</span>) Veja seu carrinho
+        <i id="cart-icon" class="fa fa-cart-plus text-lg text-white"></i>
+      </button>
+    </footer>
+    <!-- fim footer button -->
+
+    <!-- whatsapp api -->
+
+<!-- <a
+href="https://wa.me/5599981403409"
+target="_blank"
+class="fixed bottom-20 right-5 bg-green-500 text-white p-4 rounded-full shadow-lg"
+>
+<i class="fab fa-whatsapp text-2xl"></i>
+</a> -->
+    <!-- whatsapp api -->
+
+
+    <!--FIM MENU-->
+    <script src="script.js"></script>
+  </body>
+</html>
+
