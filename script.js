@@ -245,7 +245,7 @@ checkoutBtn.addEventListener("click", function () {
 
   let total = 0;
 
-  let message = `🍔 Novo Pedido #${orderNumber}\n\n`;
+  let message = `Novo Pedido #${orderNumber}\n\n`;
 
   cart.forEach((item) => {
     message += `${item.name} (x${item.quantity}) - R$ ${(item.price * item.quantity).toFixed(2)}\n`;
@@ -256,10 +256,10 @@ checkoutBtn.addEventListener("click", function () {
     "https://www.google.com/maps/search/?api=1&query=" +
     encodeURIComponent(addressInput.value);
 
-  message += `\n📍 Endereço: ${addressInput.value}\n`;
-  message += `🗺️ Ver no mapa:\n${mapsLink}\n`;
-  message += `\n💰 Total: R$ ${total.toFixed(2)}`;
-  message += `💳 Pagamento: ${paymentSelect.value}\n`;
+  message += `\nEndereço: ${addressInput.value}\n`;
+  message += `Ver no mapa:\n${mapsLink}\n`;
+  message += `\nTotal: R$ ${total.toFixed(2)}`;
+  message += `Pagamento: ${paymentSelect.value}\n`;
 
   const phone = "5599981403409";
 
