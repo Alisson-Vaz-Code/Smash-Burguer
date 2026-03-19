@@ -12,6 +12,7 @@ const cartIcon = document.getElementById("cart-icon");
 const statusSpan = document.getElementById("date-span");
 const paymentSelect = document.getElementById("payment");
 const paymentWarn = document.getElementById("payment-warn");
+const nome = document.getElementById("name");
 
 let cart = [];
 
@@ -252,14 +253,15 @@ checkoutBtn.addEventListener("click", function () {
     total += item.price * item.quantity;
   });
 
-  const mapsLink =
-    "https://www.google.com/maps/search/?api=1&query=" +
-    encodeURIComponent(addressInput.value);
+  // const mapsLink =
+  //   "https://www.google.com/maps/search/?api=1&query=" +
+  //   encodeURIComponent(addressInput.value);
 
+  message += `\nNome: ${nome.value}\n`;
   message += `\nEndereço: ${addressInput.value}\n`;
-  message += `Ver no mapa:\n${mapsLink}\n`;
-  message += `\nTotal: R$ ${total.toFixed(2)}`;
-  message += `Pagamento: ${paymentSelect.value}\n`;
+  // message += `Ver no mapa:\n${mapsLink}\n`;
+  message += `\nTotal: R$ ${total.toFixed(2)}\n`;
+  message += `\nPagamento: ${paymentSelect.value}\n`;
 
   const phone = "5599981403409";
 
